@@ -17,13 +17,13 @@ html(lang="en")
           th Genre
           th Actions 
       tbody 
-        if book != null 
+        if books != null 
           each b in books
             tr 
-              td= b.title
-              td= b.author
-              td= b.publicationYear
-              td= b.genre
+              td=b.title
+              td=b.author
+              td=b.publicationYear
+              td=b.genre
               td 
                 a(href=`/book/update/${b._id}`) Update | 
                 a(href=`/book/delete/${b._id}`) Delete
